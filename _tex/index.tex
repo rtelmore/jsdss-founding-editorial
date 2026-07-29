@@ -8,7 +8,7 @@
   12pt]{article}
 \usepackage{xcolor}
 \usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -153,6 +153,10 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+\makeatletter
+\@ifpackageloaded{sidenotes}{}{\usepackage{sidenotes}}
+\@ifpackageloaded{marginnote}{}{\usepackage{marginnote}}
+\makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -161,9 +165,8 @@
 \@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
 \makeatother
 \hypersetup{
-  pdftitle={La Palma Earthquakes},
-  pdfauthor={Steve Purves; Rowan Cockett},
-  pdfkeywords={\xmpquote{La Palma}, \xmpquote{Earthquakes}},
+  pdftitle={A Vision for the Future of Academic Publishing in Sports Analytics},
+  pdfauthor={Michael E. Schuckers; Benjamin S. Baumer; Ryan Elmore; Brian Macdonald; Gregory J. Matthews},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -183,157 +186,228 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \date{July 29, 2026}
-\title{\bf La Palma Earthquakes}
+\title{\bf A Vision for the Future of Academic Publishing in Sports
+Analytics}
 \author{
-Steve Purves\\
-Curvenote\\
-and\\Rowan Cockett\\
-Curvenote\\
+Michael E. Schuckers\\
+University of North Carolina, Charlotte\\
+and\\Benjamin S. Baumer\\
+Smith College\\
+and\\Ryan Elmore\\
+University of Denver\\
+and\\Brian Macdonald\\
+Yale University\\
+and\\Gregory J. Matthews\\
+University of Loyola, Chicago\\
 }
 \maketitle
 
 \bigskip
 \bigskip
 \begin{abstract}
-In September 2021, a significant jump in seismic activity on the island
-of La Palma (Canary Islands, Spain) signaled the start of a volcanic
-crisis that still continues at the time of writing. Earthquake data is
-continually collected and published by the Instituto Geográphico
-Nacional (IGN). \ldots{}
+
 \end{abstract}
 
-\noindent%
-{\it Keywords:} La Palma, Earthquakes
-\vfill
 
 \newpage
 \spacingset{1.9} % DON'T change the spacing!
 
 
-\section{Introduction}\label{introduction}
+Dear Colleagues,
 
-\textsubscript{Source:
-\href{https://rtelmore.github.io/jsdss-founding-editorial/index.qmd.html}{Article
-Notebook}}
+It is our great privilege to introduce the
+\href{https://jsds-sports.github.io/}{\emph{Journal of Statistics and
+Data Science in Sports}} (\emph{JSDSS}). We write to you not only to
+announce a new publication venue, but to share a founding philosophy
+that we believe is long overdue in our field. \emph{JSDSS} is born out
+of a shared frustration with the increasingly exploitative dynamics of
+academic publishing, and a collective conviction that there is a better
+way forward. We are confident that many of you share this frustration.
 
-\protect\phantomsection\label{cell-fig-timeline}
-\begin{figure}[H]
+As professors, editors, reviewers, and contributors to the academic
+literature, we have watched the pay-to-play model of open-access
+publishing grow from an occasional inconvenience into a structural
+barrier. Publishers have found clever ways to monetize visibility
+itself. It is not uncommon to encounter promotional language such as:
 
-\centering{
+\begin{quote}
+``Articles published open access with {[}publisher redacted{]} typically
+receive 35\% more citations and over 5 times as many downloads compared
+to those that are not published open access.''
+\end{quote}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={An event plot of the years of the last 8 eruptions on La Palma.}]{index_files/figure-pdf/fig-timeline-1.pdf}}
+Statements like these represent a troubling commodification of scholarly
+impact that conflates purchased exposure with genuine scientific
+contribution. We believe the academic community deserves better.
+Accordingly, \emph{JSDSS} is built on a different foundation: the
+conviction that high-quality sports statistics and data science research
+should be freely accessible to readers and free to publish for authors,
+without exception.
 
-}
+We, the five founding editors, share this vision and are committed to
+building a journal that reflects the values of academic rigor,
+reproducibility, and openness. We invite you to join us on this journey.
 
-\caption{\label{fig-timeline}Timeline of recent earthquakes on La Palma}
+\section{Founding Vision}\label{founding-vision}
 
-\end{figure}%
+\emph{JSDSS} was founded on three core principles.
 
-\textsubscript{Source:
-\href{https://rtelmore.github.io/jsdss-founding-editorial/index.qmd.html}{Article
-Notebook}}
+First, our commitment to open access is more than just lip service. At
+\emph{JSDSS}, open access means \textbf{free} to read and \textbf{free}
+to publish---no exceptions. \emph{JSDSS} is a
+\href{https://en.wikipedia.org/wiki/Diamond_open_access}{Diamond Open
+Access} journal. Research supported by academic institutions, public
+funding, or personal effort should not require a payment to reach the
+audience it deserves.
 
-\textsubscript{Source:
-\href{https://rtelmore.github.io/jsdss-founding-editorial/index.qmd.html}{Article
-Notebook}}
+Second, reproducibility is essential and not an afterthought. The
+credibility of sports analytics research depends on our ability to
+verify, replicate, and build upon earlier work. \emph{JSDSS} will
+actively incentivize transparency in data, code, and methodology, and
+work that meets our reproducibility standards will receive a special
+designation recognizing this commitment.
 
-Based on data up to and including 1971, eruptions on La Palma happen
-every 79.8 years on average.
+Third, we believe sport is a rich and underutilized laboratory for
+statistical and data science innovation. From player evaluation and
+in-game strategy to league design and fan engagement, sports data
+present compelling, real-world problems that demand rigorous and
+creative analytical thinking. We intend for \emph{JSDSS} to be the
+definitive venue for this work.
 
-Studies of the magma systems feeding the volcano, such as
-\citet{marrero2019}, have proposed that there are two main magma
-reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km
-depth) which charges and in turn feeds a shallower crustal reservoir
-(10-20km depth).
+\section{Aims and Scope}\label{aims-and-scope}
 
-Eight eruptions have been recorded since the late 1400s
-(Figure~\ref{fig-timeline}).
+\subsection{Aims}\label{aims}
 
-Data and methods are discussed in Section~\ref{sec-data-methods}.
+The aim of the \emph{Journal of Statistics and Data Science in Sports}
+is to provide an outlet for original, rigorous, practical,
+state-of-the-art, reproducible, and peer-reviewed analysis of sports
+data as well as the data science tools (software, applications, data,
+etc.) that support those analyses. The \emph{Journal of Statistics and
+Data Science in Sports} will always be fully open to both readers and
+authors: there are no fees associated with publishing or accessing
+articles in \emph{JSDSS}.\\
+Submissions will be required to follow the
+\href{https://jasa-acs.github.io/repro-guide/}{Journal of the American
+Statistical Association protocols for reproducibility}.
 
-Let \(x\) denote the number of eruptions in a year. Then, \(x\) can be
-modeled by a Poisson distribution
+\subsection{Scope}\label{scope}
 
-\begin{equation}\protect\phantomsection\label{eq-poisson}{
-p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-}\end{equation}
+We define sports broadly to include any nondeterministic competition or
+game. Examples include basketball, soccer, badminton as well as
+competitions like chess and eSports.
 
-where \(\lambda\) is the rate of eruptions per year. Using
-Equation~\ref{eq-poisson}, the probability of an eruption in the next
-\(t\) years can be calculated.
+We welcome submissions that analyze any aspect of sports data in
+appropriate and innovative ways. These analyses may include, but are not
+limited to:
 
-\begin{longtable}[]{@{}ll@{}}
-\caption{Recent historic eruptions on La
-Palma}\label{tbl-history}\tabularnewline
-\toprule\noalign{}
-Name & Year \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Name & Year \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Current & 2021 \\
-Teneguía & 1971 \\
-Nambroque & 1949 \\
-El Charco & 1712 \\
-Volcán San Antonio & 1677 \\
-Volcán San Martin & 1646 \\
-Tajuya near El Paso & 1585 \\
-Montaña Quemada & 1492 \\
-\end{longtable}
+\begin{itemize}
+\tightlist
+\item
+  In--game strategy, player acquisition, and player and team ratings and
+  evaluation,
+\item
+  Predicting play, game, or season outcomes, analysis of league
+  structures and rules,
+\item
+  Analysis of player-tracking data,
+\item
+  Any other analyses that would help teams, players, fans, leagues,
+  media and researchers understand the game better or make
+  more-informated decisions.
+\end{itemize}
 
-Table~\ref{tbl-history} summarises the eruptions recorded since the
-colonization of the islands by Europeans in the late 1400s.
+We also accept timely review articles and manuscripts discussing novel
+datasets, innovative software or applications and original applications
+of methodology to sports data. Applications should be focused on
+relevant questions whose answers are likely to be actionable by players,
+coaches, managers, and/or league officials. \emph{JSDSS} is committed to
+making all articles about the analysis of sports data freely available.
+Additionally, reproducibility is strongly encouraged particularly when
+non-proprietary data is used, and articles that meet our standards of
+reproducibility will receive a special designation.
 
-\begin{figure}
+\section{\texorpdfstring{What Makes \emph{JSDSS}
+Special}{What Makes JSDSS Special}}\label{what-makes-jsdss-special}
 
-\centering{
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Genuinely free}: Unlike many open-access outlets, \emph{JSDSS}
+  charges no article processing fees. Publishing and reading are
+  entirely free.
+\item
+  \textbf{Reproducibility recognition}: Articles that meet our
+  reproducibility standards --- sharing data, code, and analytic
+  workflows --- receive a special designation visible in the journal.
+\item
+  \textbf{Broad article types}: In addition to traditional research
+  papers, \emph{JSDSS} welcomes review articles, data notes,
+  software/application papers, and rapid communications.
+\item
+  \textbf{Community focus}: \emph{JSDSS} is built by and for the sports
+  statistics community. We welcome contributions from academics and
+  practitioners alike, and we are committed to constructive, timely peer
+  review.
+\item
+  \textbf{Best-in-class open platforms}: \emph{JSDSS} is published by
+  the \href{https://library.charlotte.edu/}{J. Murrey Atkins Library} at
+  the \href{https://www.charlotte.edu/}{University of North Carolina
+  Charlotte}, who is also providing backend support for our use of the
+  \href{https://pkp.sfu.ca/software/ojs/}{Open Journal Systems}
+  platform. We are partnering with
+  \href{https://projecteuclid.org/}{Project Euclid} to disseminate our
+  content, and will be experimenting with reproducibility reviews using
+  \href{https://github.com/jsds-sports}{GitHub}.
+\end{itemize}
 
-\pandocbounded{\includegraphics[keepaspectratio]{images/la-palma-map.png}}
+\section{Peer Review and Publishing
+Ethics}\label{peer-review-and-publishing-ethics}
 
-}
+\emph{JSDSS} adheres to the highest ethical standards. All submitted
+manuscripts are subject to initial review by the editorial team, and
+those found suitable will undergo peer review by independent, anonymous
+expert referees. {\marginnote{\begin{footnotesize}Ryan - Still need to
+discuss\end{footnotesize}}} We are committed to timely review and
+constructive feedback. Our goal is to make \emph{JSDSS} a venue where
+authors feel their work will be treated with fairness, expertise, and
+respect.
 
-\caption{\label{fig-map}Map of La Palma}
+\section{The Future}\label{the-future}
 
-\end{figure}%
+Sports analytics is a field that sits at the intersection of statistics
+and data science, and genuine public enthusiasm. We believe that
+manuscripts published in \emph{JSDSS} have the potential to reach not
+just our academic community, but front offices, coaching staffs, and
+fans alike. That possibility is part of what makes this field exciting,
+and it is part of what motivates us to build a publishing home that
+aligns with our vision.
 
-La Palma is one of the west most islands in the Volcanic Archipelago of
-the Canary Islands (Figure~\ref{fig-map}).
+We warmly invite researchers, practitioners, and innovators to
+contribute their best work to \emph{JSDSS}. We also invite feedback as
+we build this journal together. Together, we can demonstrate that
+high-quality, open, reproducible science and academic publishing are not
+mutually exclusive, but rather are complementary.
 
-\begin{figure}[H]
+We look forward to working with you!
 
-\centering{
+\textbf{The Founding Editorial Team}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={A scatterplot of earthquake locations plotting latitude against longitude.}]{index_files/figure-latex/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png}}
+\begin{itemize}
+\tightlist
+\item
+  Michael E. Schuckers
+\item
+  Benjamin S. Baumer
+\item
+  Ryan Elmore
+\item
+  Brian Macdonald
+\item
+  Greg J. Matthews
+\end{itemize}
 
-}
 
-\caption{\label{fig-spatial-plot}Locations of earthquakes on La Palma
-since 2017}
-
-\end{figure}%
-
-\textsubscript{Source:
-\href{https://rtelmore.github.io/jsdss-founding-editorial/notebooks/explore-earthquakes-preview.html\#cell-fig-spatial-plot}{Explore
-Earthquakes}}
-
-Figure~\ref{fig-spatial-plot} shows the location of recent Earthquakes
-on La Palma.
-
-\section{Data \& Methods}\label{sec-data-methods}
-
-\section{Conclusion}\label{conclusion}
-
-\section*{References}\label{references}
-\addcontentsline{toc}{section}{References}
-
-\renewcommand{\bibsection}{}
 \bibliography{references.bib}
-
-
 
 
 
