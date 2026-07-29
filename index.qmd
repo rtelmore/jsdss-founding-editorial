@@ -115,7 +115,6 @@ Additionally, reproducibility is strongly encouraged particularly when non-propr
 
 *JSDSS* adheres to the highest ethical standards. 
 All submitted manuscripts are subject to initial review by the editorial team, and those found suitable will undergo peer review by independent, anonymous expert referees.
-[Ryan - Still need to discuss]{.aside}
 We are committed to timely review and constructive feedback. 
 Our goal is to make *JSDSS* a venue where authors feel their work will be treated with fairness, expertise, and respect.
 
